@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="beans.Employee" table="employeeall">
+		<id name="id" column="Id"/>
+		<property name="name" column="Name"/>
+		<property name="email" column="Email"/>
+		<property name="salary" column="Salary"/>
+		
+		<union-subclass name="beans.SoftwarEmployee" table="softall">
+			<property name="tool"/>
+		</union-subclass>
+		
+		<union-subclass name="beans.HardwarEmployee" table="hardall">
+			<property name="workinghours"/>
+		</union-subclass>
+		
+		<union-subclass name="beans.admin" table="adminall">
+			<property name="departmentName"/>
+		</union-subclass>
+	</class>
+</hibernate-mapping>
