@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="beans.Order" table="AllOrder">
+    <id name="oid" column="orderId"></id>
+    <property name="date" column="orderDate"></property>
+    <property name="products" column="product"></property>
+    <property name="amount" column="billAmount"></property>
+    
+    </class>
+    </hibernate-mapping>
