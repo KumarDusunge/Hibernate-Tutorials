@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="beans.Employee" table="AllEmployee">
+<id name="eid" column="EmployeeId"></id>
+<property name="ename" column="EmployeeName"></property>
+<property name="salary"></property>
+<property name="did" column="DepartmentId"></property>
+
+</class>
+</hibernate-mapping>

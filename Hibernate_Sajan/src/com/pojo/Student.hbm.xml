@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 21, 2017 5:53:04 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.pojo.Student" table="STUDENT">
+        <id name="name" type="java.lang.String">
+            <column name="NAME" />
+            <generator class="assigned" />
+        </id>
+        <property name="roll" type="int">
+            <column name="ROLL" />
+        </property>
+        <many-to-one name="address" class="com.pojo.Address" fetch="join">
+            <column name="ADDRESS" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
